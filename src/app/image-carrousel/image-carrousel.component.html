@@ -1,0 +1,12 @@
+<div class="carrousel">
+  <div class="item hide" *ngFor="let image of images">
+    <img height="450" *ngIf="!image.isYTLink" [src]="image.link" [alt]="image.link">
+    <iframe *ngIf="image.isYTLink && image.link == 'video'" width="100%" height="450" src="https://www.youtube.com/embed/_1ZltiCZD3s" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <iframe *ngIf="image.isYTLink && image.link == 'app'" width="100%" height="450" src="https://www.youtube.com/embed/1YmiNVAJi5M" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <div *ngIf="image.description.length > 0" class="description">
+      <p *ngFor="let line of image.description">{{line}}</p>
+    </div>
+  </div>
+  <div class="prev" (click)="adjustIndex(-1)"><i class="fas fa-chevron-left"></i></div>
+  <div class="next" (click)="adjustIndex(1)"><i class="fas fa-chevron-right"></i></div>
+</div>

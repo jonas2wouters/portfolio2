@@ -1,0 +1,41 @@
+.name{
+  color: #e03a3b;
+  font-size: 20px;
+}
+.aboutMe{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    .photo{
+      img {
+        max-width: 360px;
+      }
+    }
+    .content{
+      flex: 1;
+      min-width: 360px;
+      .text{
+          p{
+              margin-bottom: 10px;
+          }
+      }
+      .socials{
+          display: flex;
+          gap: 5px;
+          a{
+            text-decoration: none;
+            i{
+                width: 25px;
+                height: 25px;
+                border-radius: 50rem;
+                background-color: #e03a3b77;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+          }
+      }
+  }
+}

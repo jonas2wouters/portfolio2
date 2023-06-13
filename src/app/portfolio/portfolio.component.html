@@ -1,0 +1,37 @@
+<div class="projects">
+    <h1 class="projectsTitle">Projects</h1>
+    <div *ngFor="let project of projects" class="ngForProject">
+        <div *ngIf="project" class="project">
+            <div class="intro">
+                <div class="pic"><img [src]="project.picture" alt="{{project.picture}}"></div>
+                <div class="what">
+                    <div class="name">{{project.name}}</div>
+                    <div class="functions">
+                        <div *ngFor="let function of project.functions">{{function}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text first" *ngIf="!project.showDetails">
+                <p>{{project.text[0]}}</p>
+                <span class="more" (click)="toggleProjectDetails(project.id)">Lees meer</span>
+            </div>
+            <div class="text all" *ngIf="project.showDetails">
+                <p *ngFor="let line of project.text">{{line}}</p>
+                <div *ngIf="project.images" class="images">
+                  <div *ngFor="let image of project.images"><img [src]="image.link" alt="image.link"></div>
+                </div>
+                <span class="more" (click)="toggleProjectDetails(project.id)">Minder</span>
+            </div>
+            <ul *ngIf="project.links">
+              <li *ngFor="let link of project.links"><a [href]="link.link" target="_blank">{{link.text}}</a></li>
+            </ul>
+
+            <ul class="skills">
+              <li *ngFor="let skill of project.skills">{{skill}}</li>
+            </ul>
+            <ul class="tasks">
+                <li *ngFor="let task of project.tasks">{{task}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

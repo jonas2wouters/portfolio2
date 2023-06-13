@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+.menu{
+    position: relative;
+    margin-bottom: 55px;
+    .title{
+        font-family: 'Train One', cursive;
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+    }
+    .menuItems{
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        >*{
+            cursor: pointer;
+            &.active{
+                text-decoration: underline;
+            }
+        }
+    }
+    .menuToggle{
+        position: absolute;
+        border: 1px solid lightgray;
+        color: gray;
+        border-radius: 5px;
+        right: 15px;
+        top: 15px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            width: 17px;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &.open{
+        .menuItems{
+            max-height: 180px;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menuItems{
+      flex-direction: row;
+      max-height: 180px !important;
+    }
+    .menuToggle {
+      display: none !important;
+    }
+  }
+}

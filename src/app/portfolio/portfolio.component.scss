@@ -1,0 +1,65 @@
+.projects{
+    .projectsTitle{
+        font-size: 20px;
+    }
+    .ngForProject {
+        padding: 15px;
+        margin-bottom: 10px;
+        *{
+            color: white !important;
+        }
+        .project{
+            .intro{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                .pic{
+                    img{
+                        border-radius: 50rem;
+                        width: 200px;
+                        height: 200px;
+                        background-color: white;
+                    }
+                }
+                .what{
+                    min-width: 300px;
+                    .name{
+                        font-size: 32px;
+                    }
+                    .functions{
+                        font-style: italic;
+                    }
+                }
+
+            }
+            .text{
+                margin-bottom: 10px;
+                .images{
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                }
+                p{
+                    margin-top: 10px;
+                }
+                .more, .less{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+            .tasks{
+                margin-left: 1.2rem;
+                list-style: circle;
+            }
+        }
+        &:nth-child(3n - 1){
+            background-color: rgb(124, 19, 19);
+        }
+        &:nth-child(3n){
+            background-color: rgb(11, 97, 77);
+        }
+        &:nth-child(3n + 1){
+            background-color: rgb(0, 104, 173);
+        }
+    }
+}

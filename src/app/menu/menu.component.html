@@ -1,0 +1,11 @@
+<div class="menu" [ngClass]="menuOpen ? 'open' : 'close'">
+    <div class="title">JONAS</div>
+    <div class="menuItems">
+        <div (click)="toggleMenu()" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</div>
+        <div (click)="toggleMenu()" routerLink="/about-me" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Over mij</div>
+        <div (click)="toggleMenu()" routerLink="/stage" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Stage</div>
+        <div (click)="toggleMenu()" routerLink="/portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Portfolio</div>
+        <div (click)="toggleMenu()" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</div>
+    </div>
+    <div class="menuToggle" (click)="toggleMenu()"><i class="fas fa-bars" [ngClass]="menuOpen ? 'fa-x' : 'fa-bars'"></i></div>
+</div>
