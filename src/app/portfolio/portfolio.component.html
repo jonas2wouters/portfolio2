@@ -18,11 +18,11 @@
             <div class="text all" *ngIf="project.showDetails">
                 <p *ngFor="let line of project.text">{{line}}</p>
                 <div *ngIf="project.images" class="images">
-                  <div *ngFor="let image of project.images"><img [src]="image.link" alt="image.link"></div>
+                  <div *ngFor="let image of project.images"><img [src]="image.link" class="image" alt="image.link"></div>
                 </div>
                 <span class="more" (click)="toggleProjectDetails(project.id)">Minder</span>
             </div>
-            <ul *ngIf="project.links">
+            <ul *ngIf="project.links" class="links">
               <li *ngFor="let link of project.links"><a [href]="link.link" target="_blank">{{link.text}}</a></li>
             </ul>
 

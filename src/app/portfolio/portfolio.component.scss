@@ -38,6 +38,10 @@
                   display: flex;
                   flex-wrap: wrap;
                   justify-content: space-between;
+                  gap: 10px;
+                  .image{
+                    width: 310px;
+                  }
                 }
                 p{
                     margin-top: 10px;
@@ -46,6 +50,9 @@
                     text-decoration: underline;
                     cursor: pointer;
                 }
+            }
+            .links{
+              list-style: none;
             }
             .tasks{
                 margin-left: 1.2rem;
